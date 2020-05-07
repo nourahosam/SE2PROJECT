@@ -5,17 +5,28 @@
  */
 package se2projectt;
 
+
+
 /**
  *
  * @author noura
  */
 public class SE2Projectt {
-
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Renter renter = new Renter();
+    Reservation r = new Reservation(new BuyApartment(), new Apartment(), renter);
+    r.setReservationID(5);
+    r.setDurationPerNight(5);
+    r.setReservationType('s');
+    r.setStartDate("33838");
+        
+    r.executeStrategy(r.getDurationPerNight(),r.getDurationPerNight(), r.getReservationType(), r.getStartDate());
+        
+    
     }
     
 }
